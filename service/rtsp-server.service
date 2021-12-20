@@ -1,0 +1,14 @@
+## RTSP server
+
+[Unit]
+Description=RTSP server
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+
+ExecStart=/usr/local/bin/rtsp_server
+
+[Install]
+WantedBy=multi-user.target
