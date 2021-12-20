@@ -24,3 +24,5 @@ target_compile_features(rtsp_server PRIVATE cxx_std_17)
 target_include_directories(rtsp_server PUBLIC ${GSTREAMER_INCLUDE_DIRS})
 target_link_libraries(rtsp_server PUBLIC ${GSTREAMER_LIBRARIES}
                                          ${CMAKE_THREAD_LIBS_INIT})
+install(TARGETS rtsp_server DESTINATION bin)
+install(FILES service/rtsp-server.service DESTINATION /etc/systemd/system)
